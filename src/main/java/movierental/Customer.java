@@ -14,9 +14,9 @@ public class Customer {
 		renterPoints = 0;
 	}
 
-	public void addRental(Rental arg) {
-		rentals.add(arg);
-		renterPoints += arg.getBonusPoints();
+	public void addRental(Rental rental) {
+		rentals.add(rental);
+		renterPoints += rental.getBonusPoints();
 	}
 
 	public List<Rental> getRentals() {

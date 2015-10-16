@@ -6,28 +6,28 @@ package movierental;
 
 public class NewReleaseRentalStrategy implements RentalStrategy {
 
-    private static final double COMMISION = 3;
+    private static final double COMMISSION = 3;
 
-    private static final NewReleaseRentalStrategy _instance =
+    private static final NewReleaseRentalStrategy instance =
             new NewReleaseRentalStrategy();
 
     private NewReleaseRentalStrategy() {
     }
 
     public static NewReleaseRentalStrategy getInstance() {
-        return _instance;
+        return instance;
     }
 
     @Override
     public double getMoviePrice(int numDays) {
-        return numDays * COMMISION;
+        return numDays * COMMISSION;
 
     }
 
     @Override
-    public int getRentalBonusPoints(int numDays) {
+    public int getRentalBonusPoints(int numberOfDays) {
         int points = 1;
-        if(numDays > 1)
+        if(numberOfDays > 1)
             points++;
         return points;
     }
